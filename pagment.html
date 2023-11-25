@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário Modal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background-color: #fff;
+            z-index: 1000;
+        }
+
+        .modal-content {
+            display: none;
+        }
+
+        .modal-content.active {
+            display: block;
+        }
+
+        .modal-buttons {
+            text-align: right;
+            margin-top: 10px;
+        }
+
+        button {
+            padding: 5px 10px;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Botão para abrir o modal -->
+<button onclick="openModal()">Abrir Formulário</button>
+
+<!-- Modal -->
+<div id="myModal" class="modal">
+    <!-- Conteúdo do formulário -->
+    <div id="step1" class="modal-content active">
+        <h2>Passo 1: Informações Pessoais</h2>
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome">
+
+        <label for="email">Email:</label>
+        <input type="email" id="email">
+
+        <div class="modal-buttons">
+            <button onclick="nextStep()">Avançar</button>
+        </div>
+    </div>
+
+    <div id="step2" class="modal-content">
+        <h2>Passo 2: Informações de Endereço</h2>
+        <label for="endereco">Endereço:</label>
+        <input type="text" id="endereco">
+
+        <label for="cidade">Cidade:</label>
+        <input type="text" id="cidade">
+
+        <div class="modal-buttons">
+            <button onclick="prevStep()">Voltar</button>
+            <button onclick="nextStep()">Avançar</button>
+        </div>
+    </div>
+
+    <div id="step3" class="modal-content">
+        <h2>Passo 3: Informações de Pagamento</h2>
+        <label for="cartao">Número do Cartão:</label>
+        <input type="text" id="cartao">
+
+        <label for="expiracao">Data de Expiração:</label>
+        <input type="text" id="expiracao">
+
+        <div class="modal-buttons">
+            <button onclick="prevStep()">Voltar</button>
+            <button onclick="submitForm()">Finalizar</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    var currentStep = 1;
+
+    function openModal() {
+        document.getElementById('myModal').style.display = 'block';
+        showStep(currentStep);
+    }
+
+    function nextStep() {
+        if (currentStep < 3) {
+            currentStep++;
+            showStep(currentStep);
+        }
+    }
+
+    function prevStep() {
+        if (currentStep > 1) {
+            currentStep--;
+            showStep(currentStep);
+        }
+    }
+
+    function showStep(step) {
+        var steps = document.getElementsByClassName('modal-content');
+        for (var i = 0; i < steps.length; i++) {
+            steps[i].classList.remove('active');
+        }
+
+        document.getElementById('step' + step).classList.add('active');
+    }
+
+    function submitForm() {
+        // Aqui você pode coletar os dados do formulário e enviá-los para o servidor
+        alert('Formulário enviado com sucesso!');
+        closeModal();
+    }
+
+    function closeModal() {
+        document.getElementById('myModal').style.display = 'none';
+    }
+
+    // Fecha o modal se o usuário clicar fora dele
+    window.onclick = function(event) {
+        if (event.target === document.getElementById('myModal')) {
+            closeModal();
+        }
+    };
+</script>
+
+</body>
+</html>

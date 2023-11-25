@@ -1,0 +1,87 @@
+
+
+.link-pedidos,
+.link-dados {
+    text-decoration: none;
+    color: #000; /* Cor do texto para links, ajuste conforme necessário */
+}
+
+.caixa_grande {
+    font-size: 17px;
+}
+
+.titulo-pedidos {
+    font-size: 17px;
+}
+
+.produto {
+    margin-bottom: 20px;
+    margin-top: 24px;
+    padding: 0 18px
+
+}
+
+.caixa_pedido {
+    width: 15%;
+    float: left;
+    margin-right: 10px;
+}
+.caixa_grande h2 {
+    font-size: 17px;
+    text-align: left;
+    padding-top: 23px;
+    margin: 0 21px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+
+
+.nome-produto,
+.preco,
+.tipo {
+    margin-bottom: 5px;
+    font-size: 17px;
+}
+button > img.img_sair {
+    padding-top: 20px;
+    background: none;
+    border: transparent;
+}
+
+.sem-produtos {
+   
+    font-style: italic;
+    text-align: left;
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 23px;
+    align-items: flex-start;
+}
+.descricao_pedido {
+    float: left;
+    width: 60%;
+    text-align: left; /* Adiciona o alinhamento à esquerda */
+    margin-left: 10px; /* Adiciona um espaço à esquerda para separar a imagem da descrição */
+}
+
+#Contato {
+   
+    margin-top: 34rem;
+    
+}
+.caixa_grande {
+    border: 1px solid #75757540;
+    text-align: center;
+    border-radius: 7px;
+    position: absolute;
+    top: 0;
+    padding-top: 20px;
+    right: 315px;
+    width: 812px;
+    height: auto;
+    /* height: 14em; */
+}
+hr{
+    margin: 0 10px;
+}

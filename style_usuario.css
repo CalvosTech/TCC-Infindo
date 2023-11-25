@@ -1,0 +1,136 @@
+.ola {
+    margin-bottom: 4em;
+}
+
+.container_usuario {
+    margin-top: 12em;
+    margin-left: 10em;
+    font-weight: 400;
+    font-family: "DM Sans";
+    position: relative; /* Adicionando um posicionamento relativo ao container */
+}
+
+.conteudos {
+    float: left; /* Faz com que os conteúdos fiquem lado a lado */
+}
+
+.conteudo {
+    margin-top: 10px;
+    border-bottom: 1px solid rgb(212, 210, 210);
+    height: 39px;
+    width: 274px;
+}
+
+.conteudo a {
+    text-decoration: none;
+    color: black;
+}
+
+.colunas > button {
+    border: none;
+    background: none;
+}
+
+.caixa_grande {
+    /* border: 1px solid #75757540; */
+    text-align: center;
+    border-radius: 7px;
+    position: absolute;
+    top: 0;
+    right: 315px;
+    width: 812px;
+    height: 14em;
+}
+.caixa_grande h2{
+    font-size: 3px;
+    padding-top: 12px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+
+.informacoes_pessoais {
+    
+    /* text-transform: uppercase; */
+    font-size: 13px;
+    font-family: "DM Sans";
+    color: rgb(73, 72, 72);
+     /* font-weight: 100; */
+}
+
+.campo {
+    margin-bottom: 1em;
+    width: 408px;
+    border-radius: 10px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+}
+
+input, select {
+    width: 100%;
+    padding: 0.5em;
+    overflow: visible;
+    border-radius: 8px;
+    border-width: 1px;
+    border-color: #0608082e;
+}
+
+.botoes {
+    margin-top: 2em;
+}
+
+.botao button {
+    padding: 0.5em 1em;
+    margin-left: 40em;
+    background-color: #7d88c1;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 7px;
+}
+
+.botao button:hover {
+    background-color:#616daa;
+}
+.grande_caixa {
+    border: 1px solid #75757540;
+    border-radius: 7px;
+    padding: 20px;
+    margin-top: -20px;
+    width: 896px;
+    margin-left: 350px;
+}
+
+.trocar_senha h2{
+    font-size: 20px;
+    font-weight: 600;
+    padding-bottom: 13px;
+    padding-top: 20px;
+}
+.trocar_senha{
+    /* text-transform: uppercase; */
+    font-size: 13px;
+    font-family: "DM Sans";
+    color: rgb(73, 72, 72);
+     /* font-weight: 100; */
+}
+
+div.info {
+    font-size: 1.2em;
+    color: #494848;
+}
+
+button > img.img_sair{
+    background: none;
+    border: transparent;
+}
+
+/* h2{
+    padding-bottom: 36px;
+    font-size: 16px;
+    font-weight: 800;
+    text-transform: uppercase;
+} */
